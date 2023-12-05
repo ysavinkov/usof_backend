@@ -11,7 +11,9 @@
         "test": "echo \"Error: no test specified\" && exit 1",
         "build": "npx tsc",
         "watch": "npx tsc-watch --onSuccess \"node -r dotenv/config dist/app.js dotenv_config_path=.env_default\"",
-        "dev": "npm run build && npm run watch"
+        "prod": "node -r dotenv/config dist/app.js dotenv_config_path=.env_default\"",
+        "dev": "npm run build && npm run watch",
+        "start": "npm run build && npm run prod"
     },
     "author": "",
     "license": "ISC",
